@@ -301,6 +301,24 @@ docker network inspect bridge
 
 Expected output
 
+## Lab - Creating a custom network in docker
+Listing the existing network types in docker
+```
+docker network ls
+```
+
+Create a custom docker network with a custom subnet
+```
+docker network create my-network --subnet 192.168.0.0/16
+docker network ls
+```
+
+Create a new container and attach that to custom docker network
+```
+docker run -dit --name ubuntu1 --hostname ubuntu1 --network=my-network ubuntu:latest
+docker inspect ubuntu1 | grep IPA
+```
+
 
 ## Lab - Let's create a Pod using plain docker
 
