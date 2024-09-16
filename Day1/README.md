@@ -366,3 +366,16 @@ oc get nodes -o wide
 
 Expected output
 ![image](https://github.com/user-attachments/assets/e54f5b93-ed1e-484c-a643-56acfa11250d)
+
+## Lab - Finding the openshift webconsole url and login credentials
+```
+oc get nodes
+oc whoami
+oc whoami --show-server
+oc whoami --show-console
+cat ~/openshift.txt
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/d5b94636-54dc-46c0-b904-92537f2f8ac6)
+![image](https://github.com/user-attachments/assets/c53aa3e7-33f1-41d6-b9a6-41da51f6df62)
