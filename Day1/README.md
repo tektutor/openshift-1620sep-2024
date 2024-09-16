@@ -1,4 +1,4 @@
-# Day 1
+![image](https://github.com/user-attachments/assets/203f9c89-56a8-4840-91f8-7c1adeb95a80)# Day 1
 
 ## Hypervisor Overview
 <pre>
@@ -347,3 +347,13 @@ exit
 ```
 
 If you notice the IP address reported by jegan-pause-container and nginx-jegan are same. This is how, Pod is created in Kubernetes and Openshift.
+
+## Lab - Let's check if we are able to access the openshift cluster
+```
+kubectl version
+oc version
+oc get nodes
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/4daf7e8d-1777-4c86-810e-a5fa25307318)
