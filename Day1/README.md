@@ -389,3 +389,14 @@ cat ~/openshift.txt
 Expected output
 ![image](https://github.com/user-attachments/assets/d5b94636-54dc-46c0-b904-92537f2f8ac6)
 ![image](https://github.com/user-attachments/assets/c53aa3e7-33f1-41d6-b9a6-41da51f6df62)
+
+## Lab - Find detailed meta-data about the openshift node
+```
+oc get nodes
+oc descibe node/master01.ocp4.rps.com
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/86f440c9-c501-44cb-b5a6-963b2376f0cd)
+![image](https://github.com/user-attachments/assets/60d61a87-666f-4392-9f32-e9cc442af2ec)
+![image](https://github.com/user-attachments/assets/bf738659-e802-4b01-8eb1-09f6c9fad519)
