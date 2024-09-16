@@ -239,3 +239,13 @@
 ## Red Hat Openshift High-Level Architecture
 ![openshift](openshiftArchitecture.png)
 ![openshift](master-node.png)
+
+
+## Pod Overview
+<pre>
+- a group of related containers
+- one application per Pod is the general recommended best practice
+- every Pod has a secret infra-container called pause-container which supports the networking features
+- no Pod should contain more than one main application
+</pre>
+![pod](pod.png)
