@@ -410,3 +410,25 @@ oc get projects
 Expected output
 ![image](https://github.com/user-attachments/assets/e7fc7a91-d3a2-426e-9ef6-e6c05945cc9f)
 
+
+## Lab - Creating a new project namespace to seggregate your application deployments from other users/teams
+```
+oc new-project jegan
+oc get projects
+```
+
+## Lab - Finding the currently active project and switching between projects
+Find the currently active project
+```
+oc project
+```
+
+Switching between projects
+```
+oc project default
+oc project rishi
+oc project default
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/5a93adaa-1ef6-4d5e-8ac3-322d627a36d9)
