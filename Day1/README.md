@@ -256,6 +256,15 @@
 docker run -dit --name ubuntu1 --hostname ubuntu1 ubuntu:latest /bin/bash
 docker ps
 ```
+In the above command
+<pre>
+run - will create a new container and starts the container
+dit - deattached interactive terminal
+name - ubuntu1 is the name of the container
+hostname - ubuntu1 is the hostname of the container
+ubuntu:latest - is the container image that will be downloaded from Docker Hub website and used to create the container
+/bin/bash - is the shell that will be launched inside the container
+</pre>
 
 Expected output
 ![image](https://github.com/user-attachments/assets/4fe71de7-79e4-4248-b99d-af9ec2e54892)
