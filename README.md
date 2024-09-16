@@ -26,6 +26,12 @@
   - Server 1 - 10.10.15.27 ( user01 thru user08 ) and password is rps@12345
   - Server 2 - 10.10.15.35 ( user09 thru user15 ) and password is rps@12345
   - Server 3 - 10.10.15.34 ( user16 thru user23 ) and password is rps@12345
+- The Linux Server details 
+  - OS - Oracle Linux v9.4 64-bit 
+  - Hypervisor - KVM
+  - Processor with 48 CPU Cores
+  - 755 GB RAM
+  - 17.3 TB HDD Storage
 </pre>
 
 Check if docker installed from the linux terminal
