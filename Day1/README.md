@@ -250,3 +250,12 @@
 - all the containers in the same Pod shares the same IP address and ports
 </pre>
 ![pod](pod.png)
+
+## Lab - Let's create an ubuntu container
+```
+docker run -dit --name ubuntu1 --hostname ubuntu1 ubuntu:latest /bin/bash
+docker ps
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/4fe71de7-79e4-4248-b99d-af9ec2e54892)
