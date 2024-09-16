@@ -353,7 +353,8 @@ If you notice the IP address reported by jegan-pause-container and nginx-jegan a
 kubectl version
 oc version
 oc get nodes
+kubectl get nodes
 ```
 
 Expected output
-![image](https://github.com/user-attachments/assets/4daf7e8d-1777-4c86-810e-a5fa25307318)
+![image](https://github.com/user-attachments/assets/3a66fe8a-a2b6-4f17-8a3c-c5911de2e183)
