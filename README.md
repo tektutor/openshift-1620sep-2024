@@ -11,7 +11,7 @@
 <pre>
 - Once you are able to login to your RPS Cloud lab, you can start your pre-test
 - Kindly use the RPS cloud machine to complete the test
-- While registering, you may give your email-id mentioned in the Assessment Excel sheet
+- While registering, you will have to give your email-id mentioned in the Assessment Excel sheet
 - Once everyone completes the test, we will start the training
 - Copy/Paste between your laptop/desktop and cloud machine is disabled as per your Bank policy
 - url - rpsconsulting116.examly.io/student
