@@ -105,6 +105,12 @@
 ## Docker High-Level Architecture
 ![Docker](DockerHighLevelArchitecture.png)
 
+## Why Red Hat Openshift supports only Podman and not Docker
+<pre>
+- Upto Red Hat Openshift v3.11, docker was the default container engine supported by Kubernetes and Openshift
+- Docker had a security flaw, which gives administrative access to non-administrators
+</pre>
+
 ## Container Orchestration Overview
 
 ## Docker SWARM Overview
