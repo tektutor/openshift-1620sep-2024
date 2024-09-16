@@ -409,3 +409,4 @@ oc get projects
 
 Expected output
 ![image](https://github.com/user-attachments/assets/e7fc7a91-d3a2-426e-9ef6-e6c05945cc9f)
+
