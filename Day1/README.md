@@ -268,3 +268,23 @@ ubuntu:latest - is the container image that will be downloaded from Docker Hub w
 
 Expected output
 ![image](https://github.com/user-attachments/assets/4fe71de7-79e4-4248-b99d-af9ec2e54892)
+
+## Let's create a second ubuntu container
+```
+docker run -dit --name ubuntu2-jegan --hostname ubuntu2-jegan ubuntu:latest /bin/bash
+docker ps
+```
+
+Let's rename ubuntu1 container to ubuntu1-jegan
+```
+docker rename ubuntu1 ubuntu1-jegan
+docker ps
+```
+
+Let's find the IP Address of ubuntu1-jegan and ubuntu2-jegan container
+```
+docker inspect -f {{.NetworkSettings.IPAddress}} ubuntu1-jegan
+docker inspect -f {{.NetworkSettings.IPAddress}} ubuntu2-jegan
+```
+
+As you can notice, each container acquires a private IP address.
