@@ -247,5 +247,6 @@
 - one application per Pod is the general recommended best practice
 - every Pod has a secret infra-container called pause-container which supports the networking features
 - no Pod should contain more than one main application
+- all the containers in the same Pod shares the same IP address and ports
 </pre>
 ![pod](pod.png)
