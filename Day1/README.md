@@ -237,5 +237,5 @@
 </pre>
 
 ## Red Hat Openshift High-Level Architecture
-![openshift)(openshiftArchitecture.png)
-![openshift)(master-node.png)
+![openshift](openshiftArchitecture.png)
+![openshift](master-node.png)
