@@ -28,4 +28,37 @@
   - Server 3 - 10.10.15.34 ( user16 thru user23 ) and password is rps@12345
 </pre>
 
+Check if docker installed from the linux terminal
+```
+docker --version
+```
 
+Check if you are able to list docker images
+```
+docker images
+```
+
+Check if you are able to access the kubectl - kubernetes client tool
+```
+kubectl version
+```
+
+Check if you are able to access the oc - openshift client tool
+```
+oc version
+```
+
+check if you are able to login to Red Hat Openshift cluster from terminal
+```
+cat ~/openshift.txt
+oc login 
+```
+
+Check if you are able to list the openshift nodes
+```
+oc get nodes
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/3902be69-44a5-441f-99de-ade85eb55b2a)
+![image](https://github.com/user-attachments/assets/0916077f-9908-46cf-bacb-6aeef7d8d45f)
