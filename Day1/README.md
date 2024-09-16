@@ -217,3 +217,22 @@
   - it can be made more secure by using network policy like we do in Kubernetes
   - it will enforce best practices are followed which are not taken so seriously
 </pre>
+
+## Info - Openshift onPrem vs Cloud
+<pre>
+- onPrem Openshift 
+  - installation of openshift we need to take care
+  - Red Hat Openshift license are taken care by us
+  - backup is our responsibility
+  - we need to decide the master/worker node hardware configuration as per our application workload and user traffic
+  - add new nodes into cluster is done manually using Openstack, VMWare vSphere, etc.,
+  - Metallb operator or similar operators must be used to support LoadBalancer service in a on-prem openshift setup like our lab setup
+
+- AWS ROSA
+  - installation of openshift is taken care by AWS
+  - Red Hat Openshift license is taken care by AWS
+  - Hardware configuration of master nodes are decided and managed by AWS
+  - backup of etcd database is taken care by AWS
+  - LoadBalancer service when created it will automatically create AWS ALB/ELB as it is tighly integrated with AWS
+  
+</pre>
