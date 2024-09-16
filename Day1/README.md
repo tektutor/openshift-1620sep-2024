@@ -400,3 +400,12 @@ Expected output
 ![image](https://github.com/user-attachments/assets/86f440c9-c501-44cb-b5a6-963b2376f0cd)
 ![image](https://github.com/user-attachments/assets/60d61a87-666f-4392-9f32-e9cc442af2ec)
 ![image](https://github.com/user-attachments/assets/bf738659-e802-4b01-8eb1-09f6c9fad519)
+
+## Lab - Listing projects namespaces
+```
+oc get namespaces
+oc get projects
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/e7fc7a91-d3a2-426e-9ef6-e6c05945cc9f)
