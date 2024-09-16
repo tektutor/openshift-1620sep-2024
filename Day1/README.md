@@ -122,15 +122,62 @@
     - docker support was removed
     - openshift v4.x supports only CRI-O Container Runtime and Podman Container Engine
     - Red Hat Core Enterprise Core OS - is used in all master nodes within openshift
-    - Red Hat Core Enterprise Core OS - can also be installed optionally in openshift worker nodes apart from RHEL
-  
-  
+    - Red Hat Core Enterprise Core OS - can also be installed optionally in openshift worker nodes apart from RHEL  
 </pre>
 
-## Container Orchestration Overview
+## Container Orchestration Platform Overview
+<pre>
+- though containers and images can be managed manually using Container Engines/runtimes, that is not the way it is used in the industry
+- container orchestration platforms helps us manage containerized application workloads
+- features supported
+  - any containerized applications can be deployed 
+  - High Availability (HA)
+  - light-weight
+  - allows deploying applications built in different programming languages
+  - scale up/down manually/automatically
+  - rolling update
+    - helps in upgrading your application from one version to other without any downtime
+    - can also undo i.e rollback to immediate previous version to any older version of the same application
+  - service discovery
+  - inbuilt monitoring facility
+  - inbuilt load-balancing
+  - security 
+- Examples
+  1. Docker SWARM
+  2. Kubernetes
+  3. Openshift
+</pre>
 
 ## Docker SWARM Overview
+<pre>
+- Docker's native Container Orchestration Platform
+- opensource
+- supports deploying only a Docker based containerized application workloads
+- it is easy to install and learn
+- it is also very light-weight, i.e can be installed on laptops with an average hardware configuration
+- it is generally used for learning, POC purpose
+- not a production-grade Container Orchestration Platform
+</pre>
 
 ## Kubernetes Overview
+<pre>
+- developed by Google in Go lang
+- it is opensource
+- supports only command-line
+- production grade Container Orchestration Platform
+- can be installed on laptops/desktops/workstation/server
+- node can be
+  - physical machine
+  - can be a Virtual machine
+  - can be an ec2 instance running in AWS
+  - can be an azure VM from Azure cloud
+- kubernetes cluster is a combination of many master nodes and many worker nodes
+- it is even possible to create a single node Kubernetes cluster that acts as both master and worker node
+- Kubernetes master nodes runs a special group of components called Control Plane Components
+  - API Server
+  - etcd database
+  - Controller Managers
+  - Scheduler
+</pre>
 
 ## Red Hat Openshift Overview
