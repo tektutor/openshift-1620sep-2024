@@ -291,3 +291,13 @@ As you can notice, each container acquires a private IP address.
 
 Expected output
 ![image](https://github.com/user-attachments/assets/222c9082-0abe-4cdd-b22e-b4108aacec6f)
+
+## Lab - Let's understand, how containers get its IP address
+Let's list the network types docker supports
+```
+docker network ls
+docker network inspect bridge
+```
+
+Expected output
+
