@@ -358,3 +358,11 @@ kubectl get nodes
 
 Expected output
 ![image](https://github.com/user-attachments/assets/3a66fe8a-a2b6-4f17-8a3c-c5911de2e183)
+
+## Lab - Finding the IP addresses of Openshift nodes, OS installed in nodes, Kubernetes Version 
+```
+oc get nodes -o wide
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/e54f5b93-ed1e-484c-a643-56acfa11250d)
