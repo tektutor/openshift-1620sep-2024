@@ -234,5 +234,8 @@
   - Hardware configuration of master nodes are decided and managed by AWS
   - backup of etcd database is taken care by AWS
   - LoadBalancer service when created it will automatically create AWS ALB/ELB as it is tighly integrated with AWS
-  
 </pre>
+
+## Red Hat Openshift High-Level Architecture
+![openshift)(openshiftArchitecture.png)
+![openshift)(master-node.png)
