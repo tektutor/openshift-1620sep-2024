@@ -301,3 +301,31 @@ docker network inspect bridge
 
 Expected output
 
+
+## Lab - Let's create a Pod using plain docker
+
+Let's create a pause container which provides network
+```
+docker run -d --name jegan-pause-container --hostname nginx-jegan gcr.io/google_containers:pause-amd64:3.1
+docker ps
+```
+
+Let's create a nginx web server container and connect to the pause container's network
+```
+docker run -d --name nginx-jegan --network=container:jegan-pause-container nginx:latest
+docker ps
+```
+
+Let's find the IP address of pause container
+```
+docker inspect jegan-pause-container | grep IPA
+```
+
+Let's get inside the nginx-jegan container shell
+```
+docker exec -it nginx-jegan sh
+hostname -i
+exit
+```
+
+If you notice the IP address reported by jegan-pause-container and nginx-jegan are same. This is how, Pod is created in Kubernetes and Openshift.
