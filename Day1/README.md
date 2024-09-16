@@ -432,3 +432,38 @@ oc project default
 
 Expected output
 ![image](https://github.com/user-attachments/assets/5a93adaa-1ef6-4d5e-8ac3-322d627a36d9)
+
+## Info - Control Plane Components
+<pre>
+1. API Server Pod
+2. etcd database Pod
+3. Scheduler Pod
+4. Controller Managers Pod
+</pre>
+
+Things to note
+<pre>
+- Control Plane components are started by kubelet service that runs in every node
+- the Control Plane components are also called static pods
+- Each node has a registered standard folder called /etc/kubernetes/manifest, this folder contains yaml definitions to create the control plane components
+- The /etc/kubernetes/manifests folder is registered with kubelet service, hence once the kubelet service starts running it will get to know the static pod location, it then creates the control plane components using the respective yaml files in /etc/kubernetes/manifests folder
+- it is possible, we also could copy some of our manifest files in the /etc/kubernetes/manifests folder, the kubelet will start them
+- the pods that are created by kubelet are called static pods
+</pre>
+
+## Lab - Getting inside a master node
+```
+oc debug node/master01.ocp4.rps.com
+chroot /host
+hostname
+hostname -i
+ls
+podman version
+crictl version
+podman images
+crictl ps
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/0a1d0c07-20df-48dd-849e-ac9af0670c88)
+![image](https://github.com/user-attachments/assets/55271aba-39f4-49a2-aa54-410b2f29ff39)
