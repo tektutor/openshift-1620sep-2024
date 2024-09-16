@@ -13,4 +13,6 @@
 - Kindly use the RPS cloud machine to complete the test
 - While registering, you may give your personal email-id avoid using BOFA ID
 - Once everyone completes the test, we will start the training
+- Copy/Paste between your laptop/desktop and cloud machine is disabled as per your Bank policy
+- url - rpsconsulting116.examly.io/student
 </pre>
