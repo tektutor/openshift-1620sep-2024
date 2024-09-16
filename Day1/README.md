@@ -96,10 +96,14 @@
 
 ## Docker Overview
 <pre>
-  
+- Docker Inc organization developed Docker using Go lang
+- Docker Engine comes in 2 flavours
+  1. Docker Community Edition - Docker CE ( Free )
+  2. Docker Enterprise Edition - Docker EE ( Paid )
 </pre>
 
 ## Docker High-Level Architecture
+![Docker](DockerHighLevelArchitecture.png)
 
 ## Container Orchestration Overview
 
