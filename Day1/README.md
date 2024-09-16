@@ -367,6 +367,16 @@ oc get nodes -o wide
 Expected output
 ![image](https://github.com/user-attachments/assets/e54f5b93-ed1e-484c-a643-56acfa11250d)
 
+## Lab - Login to Openshift cluster from command line
+```
+cat ~/openshift.txt
+oc login -u system:admin -n default
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/5a9eb27b-5ce5-43d6-ae86-c57a8a0548bf)
+
+
 ## Lab - Finding the openshift webconsole url and login credentials
 ```
 oc get nodes
