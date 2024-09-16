@@ -185,6 +185,7 @@
 - Kubernetes supports any container runtime/engine that implements CRI(Container Runtime Interface)
 - AWS supports managed Kubernetes cluster called EKS
 - Azure supports managed Kubernetes cluster called AKS
+- Kubernetes provides all features to make it secure, but the ownus is us, it is not secured out of the box
 </pre>
 
 ## Red Hat Openshift Overview
@@ -209,4 +210,10 @@
   
 - Azure supports managed Red Hat Openshift cluster called ARO
   - Load Balancer creates an external Load Balancer supported by Azure
+
+- As Red Hat Openshift makes use of Red Hat Enterprise Core OS, it is secure already
+  - Ports below 1024 are not allowed as it is reserved for internal use
+  - not all applications can be deployed with root access
+  - it can be made more secure by using network policy like we do in Kubernetes
+  - it will enforce best practices are followed which are not taken so seriously
 </pre>
