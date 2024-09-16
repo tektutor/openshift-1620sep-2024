@@ -5,6 +5,12 @@
 - is virtualization
 - virtualization allows us to run many Operating System side by side on the same machine ( laptop/desktop/workstation/server )
 - many OS can be running at the same time
+- each VM requires
+  - dedicated hardware resources
+  - requires dedicated CPU Cores, RAM and disk 
+- hence this kind of virtualization is considered as heavy-weight
+- each Virtual Machine - represents one fully function operating system
+- each Guest OS running within Virtual Machines has its own dedicated OS Kernel
 - there are 2 types
   - Type 1 - Bare Metal Hypervisor ( Used in Workstations and Servers )
     - Virtual Machines can be created without installing Host OS
@@ -43,11 +49,55 @@
 
 ## Hypervisor - High Level Architecture
 
+## Linux Kernel - Container support
+<pre>
+- Namespace - helps in isolating one container from other containers
+- Control Groups(CGroups ) - helps in applying resource quota restrictions at container level
+  - Ex 
+    - we can control the max RAM utilized by a container
+    - we can apply a max limit on how many CPU cores a container can utilize at any point of time
+    - can help in restrication how much disk/storage a container can use at the max
+</pre>  
+
+## Container Overview
+<pre>
+- light-weight virtualization technology
+- is an application virtualization technology
+- all containers running on a Host OS shares the hardware resources available to the Host OS
+- each container represents one application( application process )
+- containers don't represents Operating System
+- container don't have their own OS Kernel as they are just application not a OS
+- container will never be able to replace OS/Virtualization
+</pre>
+
 ## Container Runtime Overview
+<pre>
+- container runtimes internally depends on the Linux Kernel features - Namespace and CGroups
+- helps managing containers and images
+- low-level softwares, not so user-friendly
+- hence, normally end-users don't use these softwares directly
+- Examples
+  - runC - Container Runtime
+  - CRI-O - Container Runtime
+</pre>
 
 ## Container Engine Overview
+<pre>
+- container engines helps us manage containers and images
+- high-level software, very user-friendly
+- internally depends on Container Runtimes to manage images and containers
+- Examples
+  - Docker is a Container Engine
+    - internally depends on containerd
+    - containerd depends on runC Container Runtime
+  - Podman is a Container Engine
+    - internally depends on CRI-O Container Runtime
+</pre>
 
 ## Docker Overview
+<pre>
+  
+</pre>
 
 ## Docker High-Level Architecture
 
