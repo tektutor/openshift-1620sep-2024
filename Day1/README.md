@@ -161,6 +161,8 @@
 
 ## Kubernetes Overview
 <pre>
+- container orchestration platform
+- supports many container runtimes and engines
 - developed by Google in Go lang
 - it is opensource
 - supports only command-line
@@ -178,6 +180,30 @@
   - etcd database
   - Controller Managers
   - Scheduler
+- Kubernetes supports extending Kubernetes API/features by adding your custom resources and custom controller
+- Kubernetes master and nodes allow us to install any Linux distribution
+- Kubernetes supports any container runtime/engine that implements CRI(Container Runtime Interface)
+- AWS supports managed Kubernetes cluster called EKS
+- Azure supports managed Kubernetes cluster called AKS
 </pre>
 
 ## Red Hat Openshift Overview
+<pre>
+- is Red Hat's Kubernetes distribution
+- developed on top of opensource Google Kubernetes with many additional features
+- it is a superset of Kubernetes, hence all features of Kubernetes are also supported in Openshift
+- Red Hat Openshift supports only RHCOS in master nodes and either RHCOS/RHEL in worker nodes
+- supports only CRI-O Container runtime and Podman Container engine
+- enterprise product that requires commercial license
+- supports many additional features
+  - Web console
+  - Internal Openshift Image Registry
+  - Source to Image (S2I)
+    - deploying application from source code
+    - deploying application using Dockerfile
+  - supports CI/CD
+  - supports routes to expose application for external access
+  - supports user management
+- AWS supports managed Red Hat Openshift cluster called ROSA
+- Azure supports managed Red Hat Openshift cluster called ARO
+</pre>
