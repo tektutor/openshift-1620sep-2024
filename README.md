@@ -16,3 +16,15 @@
 - Copy/Paste between your laptop/desktop and cloud machine is disabled as per your Bank policy
 - url - rpsconsulting116.examly.io/student
 </pre>
+
+## Testing the lab environment
+<pre>
+- From the RPS cloud machine, you need to RDP to the Linux server assigned to you
+- The Linux user will be user<xy>, where xy is the last two digits of your RPS Cloud user
+- We have total 3 Linux servers with the below details
+  - Server 1 - 10.10.15.27 ( user01 thru user08 )
+  - Server 2 - 10.10.15.35 ( user09 thru user15 )
+  - Server 3 - 10.10.15.34 ( user16 thru user23 )
+  
+  
+</pre>
