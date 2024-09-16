@@ -205,5 +205,8 @@
   - supports routes to expose application for external access
   - supports user management
 - AWS supports managed Red Hat Openshift cluster called ROSA
+  - Load Balancer creates an external Load Balancer supported by AWS
+  
 - Azure supports managed Red Hat Openshift cluster called ARO
+  - Load Balancer creates an external Load Balancer supported by Azure
 </pre>
