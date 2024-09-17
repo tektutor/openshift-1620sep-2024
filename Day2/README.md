@@ -212,3 +212,12 @@ oc get deploy,rs,po
 
 Expected output
 ![image](https://github.com/user-attachments/assets/8a365632-6513-49c2-bd49-836318e1947a)
+
+## Lab - Find more details about a pod
+```
+oc get po
+oc describe pod/nginx-66c775969-l9tqs
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/532f291c-42df-4fb5-8730-0b62e17900a7)
