@@ -278,3 +278,13 @@ Expected output
 ![image](https://github.com/user-attachments/assets/16b9fdf8-efb4-4660-94ee-435f135501b6)
 ![image](https://github.com/user-attachments/assets/52588a8c-366f-4244-b112-788449d5befd)
 ![image](https://github.com/user-attachments/assets/3a836d7e-d5ad-4be2-8fcc-e9a0aa0f3599)
+
+## Lab - Editing a pod
+```
+oc get po
+oc edit po/ngix-66c775969-psvt9
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/cbc6493a-ee58-42c8-846c-fa1331357f62)
+![image](https://github.com/user-attachments/assets/7fd1953f-fb8b-4036-a778-20be1422f3eb)
