@@ -297,3 +297,14 @@ oc get po -o wide
 
 Expected output
 ![image](https://github.com/user-attachments/assets/3f7c5346-8fcd-4654-8b86-50ec09f2a7cb)
+
+## Lab - Getting inside a pod shell
+```
+oc get po
+oc rsh pod/<pod-name> sh
+oc rsh -c <container-name> pod/<pod-name> sh
+oc rsh deploy/nginx 
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/057e1764-29f5-4aae-899b-8b6e6eec8a1d)
