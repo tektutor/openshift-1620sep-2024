@@ -160,3 +160,14 @@ The below chain of activity happens
   - Each ReplicaSet has one or more Pod
   - Each Pod has one or more Containers
 </pre>
+
+## Lab - Create a project to seggregate your deployments from other users
+```
+oc new-project jegan
+oc get projects
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/9a2964e9-aadd-479c-9f27-0ecee9e63e8e)
+![image](https://github.com/user-attachments/assets/77263d5c-b4fb-4aac-a1f3-ef3dab135e03)
+
