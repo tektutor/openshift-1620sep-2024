@@ -221,3 +221,5 @@ oc describe pod/nginx-66c775969-l9tqs
 
 Expected output
 ![image](https://github.com/user-attachments/assets/532f291c-42df-4fb5-8730-0b62e17900a7)
+![image](https://github.com/user-attachments/assets/e23fde80-5647-4286-afeb-a47b8833a7ca)
+![image](https://github.com/user-attachments/assets/a8c7d9a0-5d7d-42b3-aac1-db0d1abe94fe)
