@@ -139,3 +139,24 @@ The below chain of activity happens
 - example
   - taking backup, every friday midnight
 </pre>
+
+## Info - Deployment
+<pre>
+- Stateless application are installed into openshift as Deployment
+- Under each deployment there would be atleast one ReplicaSet
+- Under each ReplicaSet, there could be 0 to n number of Pods
+- Every ReplicaSet, manages one version of docker image, in other words for each version of your application one replicaset will be created
+</pre>  
+
+## Info - Labels
+<pre>
+- key/values pairs
+- labels are used to map child objects
+- every components has one to many labels
+- the deployment will identify its respective replicaset using labels as a selector
+- the replicaset will identify its respective pods using labels as a selector
+- For example
+  - Each Deployment has one or more ReplicaSets
+  - Each ReplicaSet has one or more Pod
+  - Each Pod has one or more Containers
+</pre>
