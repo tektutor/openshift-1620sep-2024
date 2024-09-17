@@ -81,3 +81,9 @@ cd crc-linux-2.41.0-amd64
 
 Once you the setup is completed, copy the login crendentials along with the url as shown below
 ![image](https://github.com/user-attachments/assets/d013c044-836c-4b8b-9678-1112bb939786)
+
+Troubleshooting port conflicts, each one might change to a different non-conflicting port
+<pre>
+crc config set ingress-https-port 8843
+crc config set ingress-http-port 8080
+</pre>
