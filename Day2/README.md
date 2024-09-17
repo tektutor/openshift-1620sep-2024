@@ -204,6 +204,7 @@ Expected output
 ![image](https://github.com/user-attachments/assets/e103e971-684e-4c4f-a355-251dc2a50887)
 ![image](https://github.com/user-attachments/assets/93a893da-4840-4792-9baf-56b5416a1a96)
 ![image](https://github.com/user-attachments/assets/a946d031-eac6-4e0f-8e44-b7d3785689f2)
+![image](https://github.com/user-attachments/assets/74517c7b-47c0-4593-9406-47d0e79e1935)
 
 Listing multiple openshift objects with a single get command
 ```
