@@ -308,3 +308,20 @@ oc rsh deploy/nginx
 
 Expected output
 ![image](https://github.com/user-attachments/assets/057e1764-29f5-4aae-899b-8b6e6eec8a1d)
+
+## Lab - Port forwarding - should never be used in production ( it is meant for developer testing )
+In the below command, port 9091 is the localhost port,while 8080 is the port where the nginx  web server is listening on the container.  Instead of port 9091, you could any port of your choice that is available on your local machine.
+```
+oc get po
+oc pod-forward pod/<pod-name> 9091:8080
+```
+
+From another terminal tab, you may try accessing the web page
+```
+curl http://localhost:9091
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/41c48fcf-3261-4c2f-955b-26eb8ca098ee)
+![image](https://github.com/user-attachments/assets/a322f8ba-ce46-401d-a056-a23a97d41a61)
+
