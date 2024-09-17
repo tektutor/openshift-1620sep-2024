@@ -244,3 +244,15 @@ oc describe deploy/nginx
 Expected output
 ![image](https://github.com/user-attachments/assets/e7a7ae7e-e57a-41fe-9c03-c48e728e86f2)
 ![image](https://github.com/user-attachments/assets/57fbdc49-7648-4a6a-a63b-40e9b0246914)
+
+## Lab - Scaling up nginx deployment from 3 pods to 5 and scale down to 2 pods
+```
+oc get deploy,rs,po
+oc scale deploy/nginx --replicas=5
+oc get po
+oc scale deploy/nginx --replicas=2
+oc get po
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/05db61b9-fa43-4e6c-b004-cf37df6f4f3e)
