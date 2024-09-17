@@ -334,6 +334,7 @@ Expected output
 - accessing a service by its name is called service discovery
 - openshift has dns service
 - service discovery only works within the cluster
+- kube-proxy - provides load-balancing
 </pre>
 
 ## Lab - Creating an external nodeport service for deployment nginx
