@@ -288,3 +288,12 @@ oc edit po/ngix-66c775969-psvt9
 Expected output
 ![image](https://github.com/user-attachments/assets/cbc6493a-ee58-42c8-846c-fa1331357f62)
 ![image](https://github.com/user-attachments/assets/7fd1953f-fb8b-4036-a778-20be1422f3eb)
+
+
+## Lab - Find the pod id and node where it is running
+```
+oc get po -o wide
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/3f7c5346-8fcd-4654-8b86-50ec09f2a7cb)
