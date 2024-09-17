@@ -88,3 +88,55 @@ The below chain of activity happens
 - kubelet monitors the status of the containers running locally, it then frequently like a heart-beat it keeps updating the status to API Server via REST calls
 - API server receives the kubelet status updates, it then updates the Pod status in the etcd database
 </pre>
+
+
+## Info - Deployment Controller
+<pre>
+- When pods are requested by the user, it will try to spread the pods on multiples nodes but there is no assurance
+- it is possible all the pods from a specific deployment may be scheduled to the same nodes as well
+- Deployment controller doesn't put any constraint on scheduling, hence it is upto the scheduler to decide which pod goes to which node
+- what is the guarantee offered 
+  - at point of time, the desired number of pods will be always running
+  - but they can run on any nodes
+</pre>
+
+## Info - DaemonSet Controller
+<pre>
+- unlike the Deployment Controller, daemonset controller ensures one Pod per node are deployed
+- the number of Pods deployed will be equivalent to the number of nodes in your openshift cluster
+- hence, the pods created as part of daemonset are distributed always one Pod per node
+- What is the practical usecase for this?
+  - prometheus pod to collect performance metrics need to run in every node
+  - kube-proxy pod in Kubernetes/Openshift runs in every node
+- what is the guarantee offerred
+  - if 5 nodes are there in cluster, 5 pods would be created
+  - each Pod would be scheduled to different nodes in the cluster
+  - the total number of pods and nodes would match 
+</pre>
+
+## Info - StatefulSet Controller
+<pre>
+- used to deploy stateful applications
+- they tend to use external storage in general
+- generally when we have deploy database applications as a cluster that synchronizes data
+- creating a cluster of database varies for every database, hence cluster creation is our responsibility
+- statefulset provides the required sections/provisions to create a cluster, but it won't create a cluster of databases out of the box
+- scaling up/down the number of db pods and make them work as cluster is very complex, hence we also need to do some configurations to ensure they are running as a cluster
+</pre>
+
+## Info - Job Controller
+<pre>
+- is used to do any one time activity
+- the one time activity will run in a container which of part of a Pod
+- example
+  - taking one time backup of etcd database
+</pre>  
+
+## Info - CronJob Controller
+<pre>
+- is used to do any repeating tasks 
+- it can be scheduled to run on a particular day/week/month and particular time
+- example
+  - taking backup, every friday midnight
+</pre>
+
