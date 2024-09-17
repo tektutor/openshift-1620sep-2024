@@ -324,7 +324,7 @@ docker inspect ubuntu1 | grep IPA
 
 Let's create a pause container which provides network
 ```
-docker run -d --name jegan-pause-container --hostname nginx-jegan gcr.io/google_containers:pause-amd64:3.1
+docker run -d --name jegan-pause-container --hostname nginx-jegan gcr.io/google_containers/pause-amd64:3.1
 docker ps
 ```
 
