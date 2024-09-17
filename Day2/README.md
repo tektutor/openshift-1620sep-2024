@@ -256,3 +256,25 @@ oc get po
 
 Expected output
 ![image](https://github.com/user-attachments/assets/05db61b9-fa43-4e6c-b004-cf37df6f4f3e)
+
+## Lab - Editing an existing deployment
+```
+oc get deploy
+oc edit deploy/nginx
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/3fca651b-0fee-40dc-9e02-739d26415d23)
+![image](https://github.com/user-attachments/assets/419fa67a-1d86-42a8-a7ad-1bf1c3df5083)
+
+## Lab - Editing a replicaset
+```
+oc get rs
+oc edit rs/nginx-66c775969
+```
+Expected output
+
+![image](https://github.com/user-attachments/assets/8a269bee-6b55-4bea-9891-c21919c4fa5b)
+![image](https://github.com/user-attachments/assets/16b9fdf8-efb4-4660-94ee-435f135501b6)
+![image](https://github.com/user-attachments/assets/52588a8c-366f-4244-b112-788449d5befd)
+![image](https://github.com/user-attachments/assets/3a836d7e-d5ad-4be2-8fcc-e9a0aa0f3599)
