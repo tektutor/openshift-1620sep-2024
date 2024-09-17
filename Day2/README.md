@@ -223,3 +223,13 @@ Expected output
 ![image](https://github.com/user-attachments/assets/532f291c-42df-4fb5-8730-0b62e17900a7)
 ![image](https://github.com/user-attachments/assets/e23fde80-5647-4286-afeb-a47b8833a7ca)
 ![image](https://github.com/user-attachments/assets/a8c7d9a0-5d7d-42b3-aac1-db0d1abe94fe)
+
+## Lab - Finding more details about a replicaset
+```
+oc get rs
+oc describe rs/nginx-66c775969
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/151a3aa0-d9b4-446f-94e3-3a349462631b)
+![image](https://github.com/user-attachments/assets/8f9d7e24-b26a-4bac-aad4-e65fb97fc7fb)
