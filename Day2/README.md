@@ -165,9 +165,42 @@ The below chain of activity happens
 ```
 oc new-project jegan
 oc get projects
+oc get projects | grep jegan
 ```
 
 Expected output
 ![image](https://github.com/user-attachments/assets/9a2964e9-aadd-479c-9f27-0ecee9e63e8e)
 ![image](https://github.com/user-attachments/assets/77263d5c-b4fb-4aac-a1f3-ef3dab135e03)
 
+## Lab - Deploying our first application into openshift
+First check which is active currently, make sure you are deploying in your project
+```
+oc project
+oc create deployment nginx --image=bitnami/nginx:latest --replicas=3
+```
+
+Listing the deployments
+```
+oc get deployments
+oc get deployment
+oc get deploy
+```
+
+Listing the replicasets
+```
+oc get replicasets
+oc get replicaset
+oc get rs
+```
+
+Listing all pods
+```
+oc get pods
+oc get pod
+oc get po
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/e103e971-684e-4c4f-a355-251dc2a50887)
+![image](https://github.com/user-attachments/assets/93a893da-4840-4792-9baf-56b5416a1a96)
+![image](https://github.com/user-attachments/assets/a946d031-eac6-4e0f-8e44-b7d3785689f2)
