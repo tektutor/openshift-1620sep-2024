@@ -325,3 +325,38 @@ Expected output
 ![image](https://github.com/user-attachments/assets/41c48fcf-3261-4c2f-955b-26eb8ca098ee)
 ![image](https://github.com/user-attachments/assets/a322f8ba-ce46-401d-a056-a23a97d41a61)
 
+## Info - Openshift service
+<pre>
+- service represents a group of load-balanced pods
+- the pods behind a service comes from a single deployment
+- when the deployment is scaled up/down the service - pod endpoints are updated automatically
+- no two pods should communicate with each other directly, they should always communicate via a service
+- accessing a service by its name is called service discovery
+- openshift has dns service
+- service discovery only works within the cluster
+</pre>
+
+## Lab - Creating an external nodeport service for deployment nginx
+```
+oc get deploy
+oc expose deploy/nginx --type=NodePort --port=8080
+oc get services
+oc get service
+oc get svc
+oc describe svc/nginx
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/b3900278-1b68-4de3-ac77-8464bc072821)
+![image](https://github.com/user-attachments/assets/a8ff83e1-c434-4f58-af8b-c0870ca1fd7f)
+
+Accessing a NodePort service from outside the cluster
+```
+oc get nodes -o wide
+curl http://<node-ip>:<node-port>
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/e046a7d8-dae6-4739-9000-f7b24fd43f1f)
+![image](https://github.com/user-attachments/assets/72ed87bd-12de-4a5e-987f-1495fdedccc7)
+
