@@ -204,3 +204,11 @@ Expected output
 ![image](https://github.com/user-attachments/assets/e103e971-684e-4c4f-a355-251dc2a50887)
 ![image](https://github.com/user-attachments/assets/93a893da-4840-4792-9baf-56b5416a1a96)
 ![image](https://github.com/user-attachments/assets/a946d031-eac6-4e0f-8e44-b7d3785689f2)
+
+Listing multiple openshift objects with a single get command
+```
+oc get deploy,rs,po
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/8a365632-6513-49c2-bd49-836318e1947a)
