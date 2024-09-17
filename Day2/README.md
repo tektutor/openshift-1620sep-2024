@@ -234,3 +234,13 @@ oc describe rs/nginx-66c775969
 Expected output
 ![image](https://github.com/user-attachments/assets/151a3aa0-d9b4-446f-94e3-3a349462631b)
 ![image](https://github.com/user-attachments/assets/8f9d7e24-b26a-4bac-aad4-e65fb97fc7fb)
+
+## Lab - Finding more details about a deployment
+```
+oc get deploy
+oc describe deploy/nginx
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/e7a7ae7e-e57a-41fe-9c03-c48e728e86f2)
+![image](https://github.com/user-attachments/assets/57fbdc49-7648-4a6a-a63b-40e9b0246914)
