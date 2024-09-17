@@ -68,3 +68,16 @@ oc get nodes
 Expected output
 ![image](https://github.com/user-attachments/assets/3902be69-44a5-441f-99de-ade85eb55b2a)
 ![image](https://github.com/user-attachments/assets/0916077f-9908-46cf-bacb-6aeef7d8d45f)
+
+## Lab - Installing Single Node Openshift cluster
+```
+cd ~
+cd crc-linux-2.41.0-amd64
+./crc setup
+./crc config set memory 32768
+./crc config set disk-size 50
+./crc start
+```
+
+Once you the setup is completed, copy the login crendentials along with the url as shown below
+![image](https://github.com/user-attachments/assets/d013c044-836c-4b8b-9678-1112bb939786)
