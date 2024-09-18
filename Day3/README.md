@@ -90,3 +90,18 @@ curl http://<loadbalancer-external-p>
 - We need to define Custom Resource Definition(CRD)
 - CRDS introduce/register a new type of Custom Resource(CR) to your Openshift Cluster
 </pre>
+
+## Lab - Deploying nginx web server in declarative style using yaml files
+```
+oc project jegan
+oc new-project jegan
+oc create deploy nginx --image=bitnami/nginx:latest --replicas=3 --dry-run=client -o yaml
+oc create deploy nginx --image=bitnami/nginx:latest --replicas=3 --dry-run=client -o yaml > nginx-deploy.yml
+oc create -f nginx-deploy.yml --save-config
+oc get deploy,rs,po
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/43ecb9e5-70cb-4139-9f0e-867f8ab13344)
+![image](https://github.com/user-attachments/assets/ba86e670-3213-4f28-bacd-513eb112fcca)
+![image](https://github.com/user-attachments/assets/8877703a-83c9-49dc-bb8d-746f8117fdba)
