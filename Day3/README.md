@@ -171,4 +171,17 @@ Expected output
 ![image](https://github.com/user-attachments/assets/38917c0c-7dae-4cc5-a932-53a0cafe3cf0)
 ![image](https://github.com/user-attachments/assets/ee0259ce-4fab-4350-9a45-3700d56633c7)
 ![image](https://github.com/user-attachments/assets/ea78b773-317f-4907-8df2-cc1c0d5fb9ce)
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/3d804d90-aae1-4f4c-aebb-c6c32750b106)
+
+Once you are done with this exercise, you may delete the pod declaratively as shown below
+```
+oc get po
+oc delete -f nginx-pod.yml
+oc get po
+```
+
+Expected output
+
+![image](https://github.com/user-attachments/assets/9de76267-45c6-4ca3-9270-8c8dcf2acf0b)
+
+
