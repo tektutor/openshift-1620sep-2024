@@ -68,3 +68,12 @@ podman images
 exit
 ```
 
+## Lab - Creating a loadbalancer service for nginx deployment
+```
+oc delete svc/nginx
+oc expose deploy --type=LoadBalancer --port=8080
+oc get svc
+oc describe svc/nginx
+curl http://<loadbalancer-external-p>
+```
+
