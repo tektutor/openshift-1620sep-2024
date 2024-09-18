@@ -77,3 +77,16 @@ oc describe svc/nginx
 curl http://<loadbalancer-external-p>
 ```
 
+## Info - Openshift Operators
+<pre>
+- automating the human operator specific skills within Openshift cluster
+- Operators = Custom Resources(s) + Custom Controller(s)
+- One Controller manages one type of Resource
+- Operators extend the functionanlity of Openshift/Kubernetes
+</pre>
+
+## Info - How Custom Resource(CR) are added to Openshift Cluster?
+<pre>
+- We need to define Custom Resource Definition(CRD)
+- CRDS introduce/register a new type of Custom Resource(CR) to your Openshift Cluster
+</pre>
