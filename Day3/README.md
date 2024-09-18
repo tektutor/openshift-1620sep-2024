@@ -188,5 +188,27 @@ Expected output
 ```
 oc create -f nginx-deploy.yml
 oc expose deploy/nginx --type=ClusterIP --port=8080 --dry-run=client -o yaml
-oc expose deploy/nginx --type=ClusterIP --port=8080 --dry-run=client -o yaml > nginx-
+oc expose deploy/nginx --type=ClusterIP --port=8080 --dry-run=client -o yaml > nginx-clusterip-svc.yml
 ```
+
+Expected output
+
+## Lab - Declaratively creating an internal loadbalancer service for nginx deployment
+```
+oc create -f nginx-deploy.yml
+oc expose deploy/nginx --type=LoadBalancer --port=8080 --dry-run=client -o yaml
+oc expose deploy/nginx --type=LoadBalancer --port=8080 --dry-run=client -o yaml > nginx-lb-svc.yml
+```
+
+Expected output
+
+## Lab - Declaratively creating an internal nodeport service for nginx deployment
+```
+oc create -f nginx-deploy.yml
+oc expose deploy/nginx --type=NodePort --port=8080 --dry-run=client -o yaml
+oc expose deploy/nginx --type=NodePort --port=8080 --dry-run=client -o yaml > nginx-nodeport-svc.yml
+```
+
+Expected output
+
+
