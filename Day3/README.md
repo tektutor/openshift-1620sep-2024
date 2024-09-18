@@ -105,3 +105,17 @@ Expected output
 ![image](https://github.com/user-attachments/assets/43ecb9e5-70cb-4139-9f0e-867f8ab13344)
 ![image](https://github.com/user-attachments/assets/ba86e670-3213-4f28-bacd-513eb112fcca)
 ![image](https://github.com/user-attachments/assets/8877703a-83c9-49dc-bb8d-746f8117fdba)
+
+## Lab - Updating the deployment in declarative style - scale up/down
+Update the replicas count from 3 to 5 and save it
+```
+ls
+vim nginx-deploy.yml
+oc apply -f nginx-deploy
+oc get po
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/574869eb-f31a-4edd-9133-4cc554dac466)
+![image](https://github.com/user-attachments/assets/d30b7b67-9c13-457c-b092-ebd0affe8ff8)
+![image](https://github.com/user-attachments/assets/c444d1d8-1348-49d0-9d9b-a0a8331ccbff)
