@@ -212,3 +212,28 @@ oc expose deploy/nginx --type=NodePort --port=8080 --dry-run=client -o yaml > ng
 Expected output
 
 
+## Info - Persistent Volume (PV)
+<pre>
+- is a external storage that can be used by the applications runing within Pod
+- this can be provisioned by Administrator either manually or dynamically 
+- created on the cluster scope, which any pod running in any project namespace can claim and use PV
+- In case the PV is manually provisioned, the administrator will have create Persistent volume 
+  - with a specific size capacity
+  - with specific access modes
+    - ReadWriteOnce
+    - ReadWriteMany
+    - etc
+  - StorageClass(optional)
+  - Labels ( optional )
+</pre>
+
+## Info - Persistent Volume Claims (PVC)
+<pre>
+- is the way your application can request for external storage
+- PV will have to define
+  - the size of the storage required
+  - storageclass(optional)
+  - access mode
+  - labels (optional)
+</pre>
+
