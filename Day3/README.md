@@ -36,3 +36,8 @@ Expected output
 ![image](https://github.com/user-attachments/assets/ac6d19ee-2db3-45ec-a623-7120ec76e40e)
 ![image](https://github.com/user-attachments/assets/f971fb95-3acd-4167-a1b5-9bdbf164d612)
 ![image](https://github.com/user-attachments/assets/8f414317-ac49-4464-8559-798fcea32f4f)
+
+## Info - Metallb Operator
+<pre>
+https://medium.com/tektutor/using-metallb-loadbalancer-with-bare-metal-openshift-onprem-4230944bfa35  
+</pre>
