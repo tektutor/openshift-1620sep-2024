@@ -119,3 +119,13 @@ Expected output
 ![image](https://github.com/user-attachments/assets/574869eb-f31a-4edd-9133-4cc554dac466)
 ![image](https://github.com/user-attachments/assets/d30b7b67-9c13-457c-b092-ebd0affe8ff8)
 ![image](https://github.com/user-attachments/assets/c444d1d8-1348-49d0-9d9b-a0a8331ccbff)
+
+## Lab - Delete a deployment in declarative style
+```
+oc get deploy,rs,po
+oc delete -f nginx-deploy.yml
+oc get deploy,rs,po
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/7eea1272-b022-444b-99f3-9af679a9107e)
