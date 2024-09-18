@@ -152,3 +152,21 @@ Expected output
 ![image](https://github.com/user-attachments/assets/4625c4f0-dcba-442d-838e-abe793fadf61)
 ![image](https://github.com/user-attachments/assets/f99a15a8-9a74-4cf5-83d0-df2ba6d66a52)
 ![image](https://github.com/user-attachments/assets/2dfc8ee3-b3ea-40c5-bf68-f89b260dbca9)
+
+## Lab - Creating a pod in declarative style without deployment and replicaset
+```
+oc get po
+oc get po/nginx-rs-4tqsj -o yaml
+oc get po/nginx-rs-4tqsj -o yaml > nginx-pod.yml
+# Clean up the pod as shown below
+cat nginx-pod.yml
+oc delete -f nginx-rs.yml
+oc create -f nginx-pod.yml --save-config
+oc get po
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/75db5209-7ad2-49c2-ad26-e4451db018b9)
+![image](https://github.com/user-attachments/assets/318c136c-f86c-4cd5-8662-fe3945934a4b)
+![image](https://github.com/user-attachments/assets/38917c0c-7dae-4cc5-a932-53a0cafe3cf0)
+![image](https://github.com/user-attachments/assets/ee0259ce-4fab-4350-9a45-3700d56633c7)
