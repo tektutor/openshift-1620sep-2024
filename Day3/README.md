@@ -50,11 +50,21 @@ oc delete svc/nginx
 oc expose deploy/nginx --port=8080
 oc get svc
 oc describe svc/nginx
+oc expose svc/nginx
 curl http://nginx-jegan.apps-crc.testing
 ```
 
 Expected output
 ![image](https://github.com/user-attachments/assets/e0f50e33-4965-48dd-955b-9ecab0375161)
 ![image](https://github.com/user-attachments/assets/cdf404cb-abf0-4955-881c-cce9c754cf2e)
-
 ![image](https://github.com/user-attachments/assets/2172b082-5560-4a7a-a18b-415ad2bc5262)
+
+## Lab - Getting inside a openshift node 
+```
+oc debug node/crc
+chroot /host
+crictl ps
+podman images
+exit
+```
+
