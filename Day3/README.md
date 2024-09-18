@@ -25,6 +25,8 @@ oc get po
 oc rsh pod/test-pod sh
 curl http://nginx:8080
 curl http://<service-name>:<service-port>
+curl http://10.217.5.158:8080
+curl http://<service-ip>:<service-port>
 ```
 
 Expected output
@@ -33,3 +35,4 @@ Expected output
 ![image](https://github.com/user-attachments/assets/8c552613-2446-49cc-9c9f-0137b39656c9)
 ![image](https://github.com/user-attachments/assets/ac6d19ee-2db3-45ec-a623-7120ec76e40e)
 ![image](https://github.com/user-attachments/assets/f971fb95-3acd-4167-a1b5-9bdbf164d612)
+![image](https://github.com/user-attachments/assets/8f414317-ac49-4464-8559-798fcea32f4f)
