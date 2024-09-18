@@ -129,3 +129,25 @@ oc get deploy,rs,po
 
 Expected output
 ![image](https://github.com/user-attachments/assets/7eea1272-b022-444b-99f3-9af679a9107e)
+
+## Lab - Declaratively creating replicaset without deployment
+```
+oc create -f nginx-deploy.yml
+oc get rs
+oc get rs/nginx-66c775969 -o yaml
+oc get rs/nginx-66c775969 -o yaml > nginx-rs.yml
+# We need to clean up the nginx-rs.yml as shown below
+cat nginx-rs.yml
+oc delete -f nginx-deploy.yml
+oc get deploy,rs,po
+oc create -f nginx-rs.yml --save-config
+oc get rs,po
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/29e1aa72-8570-443c-89ba-8f9c9929c4ba)
+![image](https://github.com/user-attachments/assets/e705b394-8f89-4cf4-82e2-44106e5fe8fc)
+![image](https://github.com/user-attachments/assets/4ca6bc6d-a119-4cfb-b869-d6cdd3feabf0)
+![image](https://github.com/user-attachments/assets/efe9335b-0fed-44b9-8baa-d817d9c279f6)
+![image](https://github.com/user-attachments/assets/4625c4f0-dcba-442d-838e-abe793fadf61)
+![image](https://github.com/user-attachments/assets/f99a15a8-9a74-4cf5-83d0-df2ba6d66a52)
