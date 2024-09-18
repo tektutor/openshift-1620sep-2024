@@ -184,4 +184,9 @@ Expected output
 
 ![image](https://github.com/user-attachments/assets/9de76267-45c6-4ca3-9270-8c8dcf2acf0b)
 
-
+## Lab - Declaratively creating an internal clusterip service for nginx deployment
+```
+oc create -f nginx-deploy.yml
+oc expose deploy/nginx --type=ClusterIP --port=8080 --dry-run=client -o yaml
+oc expose deploy/nginx --type=ClusterIP --port=8080 --dry-run=client -o yaml > nginx-
+```
