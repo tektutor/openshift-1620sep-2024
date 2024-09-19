@@ -49,14 +49,6 @@ oc scale deploy/hello --replicas=3
 oc get deploy,rs,po,svc
 ```
 
-Let's create ingress
-```
-cd ~/openshift-1620sep-2024
-git pull
-cd Day4/ingress
-oc apply -f ingress.yml
-```
-
 Expected output
 ![image](https://github.com/user-attachments/assets/26f218cb-1409-497e-acd6-cede01dbe572)
 ![image](https://github.com/user-attachments/assets/055a075e-68c9-4c7b-ae94-62d4da8de84e)
@@ -64,3 +56,24 @@ Expected output
 ![image](https://github.com/user-attachments/assets/42d97edc-4929-4041-87fc-34f061c296a7)
 ![image](https://github.com/user-attachments/assets/4e03f5b6-c5ac-42d4-a24c-c54098021dd7)
 ![image](https://github.com/user-attachments/assets/956df887-d85d-45d4-965f-88cf1c2e6ccf)
+![image](https://github.com/user-attachments/assets/ae7c108d-1dab-4f64-8cf3-7822deb75b5c)
+
+Let's create ingress ( We need to add tektutor.apps.ocp4.rps.com to /etc/hosts with the crc node ip address )
+```
+cd ~/openshift-1620sep-2024
+git pull
+cd Day4/ingress
+cat ingress.yml
+oc apply -f ingress.yml
+oc get ingress
+oc describe ingress/tektutor
+curl http://tektutor.apps.ocp4.rps.com/nginx
+curl http://tektutor.apps.ocp4.rps.com/hello
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/3928efb2-8853-430d-9ae0-583b2159241d)
+![image](https://github.com/user-attachments/assets/ccba3603-9aeb-4b1c-bdad-3685088ae602)
+![image](https://github.com/user-attachments/assets/f4443737-475c-41c5-9bef-e9e4ac1c37e9)
+![image](https://github.com/user-attachments/assets/0fdfc101-6683-4ef6-9c5f-347c91af4148)
+![image](https://github.com/user-attachments/assets/9ca5d60d-d649-4766-90f5-42f316bec604)
