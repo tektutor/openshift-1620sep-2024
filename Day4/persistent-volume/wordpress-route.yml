@@ -8,5 +8,5 @@ spec:
   port:
     targetPort: 8080
   to:
-    kind: service
+    kind: Service
     name: wordpress

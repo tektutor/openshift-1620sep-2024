@@ -7,9 +7,9 @@ spec:
     matchLabels:
       name: jegan  # Replace 'jegan' with your name
       app: wordpress  
-    accessModes:
-    - ReadWriteOnce
-    volumeMode: Filesystem
-    resources:
-      requests:
-        storage: 100Mi
+  accessModes:
+  - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 100Mi

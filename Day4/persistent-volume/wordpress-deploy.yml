@@ -12,9 +12,8 @@ spec:
 
   template:
     metadata:
-      metadata:
-        labels:
-          app: wordpress
+      labels:
+        app: wordpress
       spec:
         volumes:
         - name: wordpress-storage
