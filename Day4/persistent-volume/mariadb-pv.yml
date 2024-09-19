@@ -6,6 +6,7 @@ metadata:
     name: jegan # Replace 'jegan' with your name
     app: mariadb
 spec:
+  storageClassName: manual
   capacity:
     storage: 100Mi
   volumeMode: Filesystem
