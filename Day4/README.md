@@ -114,8 +114,16 @@ openssl req -new -key key.key -out csr.csr -subj="/CN=nginx-jegan.apps.ocp4.rps.
 ```
 Sign the public key using the private key and generate a certificate(.crt)
 ```
-openssl x509 -requ -in csr.csr --signkey key.key -out crt.crt
+openssl x509 -req -in csr.csr --signkey key.key -out crt.crt
 oc create route edge --service nginx --hostname nginx-jegan.apps.ocp4.rps.com --key key.key --cert crt.crt
 ```
 
 Expected output
+![image](https://github.com/user-attachments/assets/c462cb7b-c1e3-427d-86b0-ee1fc0f0215a)
+![image](https://github.com/user-attachments/assets/dd561b94-64f4-4969-97bc-1befc160ffde)
+![image](https://github.com/user-attachments/assets/983fe2c3-9af6-4abc-a32d-0af591708d1a)
+![image](https://github.com/user-attachments/assets/f445c57b-6c93-4000-9e6c-92a042b61b55)
+![image](https://github.com/user-attachments/assets/36219510-0cbb-4049-9f1c-8b1cd9e3f8b5)
+![image](https://github.com/user-attachments/assets/edff08db-8388-41fd-b4a5-1a245e33579d)
+![image](https://github.com/user-attachments/assets/022ec62e-4c77-4d7c-9541-121cfadd401a)
+![image](https://github.com/user-attachments/assets/f0c5e83a-9805-4c41-b153-3edfc72287e3)
