@@ -6,4 +6,21 @@ metadata:
     haproxy.router.openshift.io/rewrite-target: / 
 spec:
   rules:
+  - host: tektutor.apps.ocp4.rps.com
+    http:
+      paths:
+      - backend:
+        service:
+          name: nginx
+          port:
+            number: 8080
+        path: /nginx
+        pathType: Prefix
 
+      - backend:
+        service:
+          name: hello 
+          port:
+            number: 8080
+        path: /hello
+        pathType: Prefix
