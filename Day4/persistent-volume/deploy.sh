@@ -10,4 +10,4 @@ oc create -f wordpress-pv.yml --save-config
 oc create -f wordpress-pvc.yml --save-config
 oc create -f wordpress-deploy.yml --save-config
 oc create -f wordpress-svc.yml --save-config
-oc create -f wordpress-rout.yml --save-config
+oc create -f wordpress-route.yml --save-config
