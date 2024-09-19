@@ -14,8 +14,8 @@ spec:
     metadata:
       labels:
         app: wordpress
-      spec:
-        volumes:
+    spec:
+      volumes:
         - name: wordpress-storage
           persistentVolumeClaim:
             claimName: wordpress-pvc-jegan  # Replace 'jegan' with your name
