@@ -32,6 +32,10 @@ Expected output
 - We are going to create two deployment 
   1. nginx deployment with 3 pods and a clusterip service
   2. hello deployment with 3 pods and a clusterip service
+- For an Ingress to work we need 3 things
+  1. Ingress Forwarding rule
+  2. Load Balancer - For example it could nginx load balancer or HAProxy Load Balancer
+  3. In case, nginx is used as load balancer in your openshift cluster then, your cluster should have a Nginx Ingress Controller.  Otherwise, you cluster should have a HAProxy Ingress Controller
 </pre>
 
 Let's create nginx deployment
@@ -78,3 +82,40 @@ Expected output
 ![image](https://github.com/user-attachments/assets/0fdfc101-6683-4ef6-9c5f-347c91af4148)
 ![image](https://github.com/user-attachments/assets/5a54ddd5-c064-4302-ae85-fbd83c605a21)
 ![image](https://github.com/user-attachments/assets/9ca5d60d-d649-4766-90f5-42f316bec604)
+
+## Lab - Job
+
+## Lab - CronJob
+
+## Lab - Creating an edge route for nginx deployment
+Let's deploy nginx 
+```
+oc delete project jegan
+oc new-project jegan
+
+oc create deployment nginx --image=bitnami/nginx:latest --replicas=3
+oc expose deploy/nginx --port=8080
+```
+
+Find your base domain of your openshift cluster
+```
+oc get ingresses.config/cluster -o jsonpath={.spec.domain}
+```
+
+Let's generate a private key
+```
+openssl version
+openssl genrsa -out key.key
+```
+
+We need to create a public key using the private key for a spcific organization domain
+```
+openssl req -new -key key.key -out csr.csr -subj="/CN=nginx-jegan.apps.ocp4.rps.com"
+```
+Sign the public key using the private key and generate a certificate(.crt)
+```
+openssl x509 -requ -in csr.csr --signkey key.key -out crt.crt
+oc create route edge --service nginx --hostname nginx-jegan.apps.ocp4.rps.com --key key.key --cert crt.crt
+```
+
+Expected output
