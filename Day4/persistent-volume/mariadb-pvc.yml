@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: mariadb-pvc-jegan # Replace 'jegan' with your name
 spec:
+  storageClassName: manual
   selector:
     matchLabels:
       name: jegan # Replace 'jegan' with your name
