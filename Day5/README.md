@@ -1,5 +1,11 @@
 # Day 5
 
+## Please share your training feedback here ( complete it from RPS Lab machine )
+<pre>
+https://survey.zohopublic.com/zs/bgD42z
+</pre>
+
+
 ## Lab - Scheduling pods matching a specific node criteria
 There are 2 types of Node Affinity possible
 1. Preferred During Scheduling Ignored During Execution
@@ -293,6 +299,19 @@ Expected output
 ![image](https://github.com/user-attachments/assets/e74926e5-6196-4061-a1ff-56f80c2e45b2)
 ![image](https://github.com/user-attachments/assets/38892c00-3e05-4dac-9aca-35101187bbef)
 
+
+## Lab - S2I - Deploying application using GitHub source code with source strategy
+```
+oc project jegan
+oc new-app registry.access.redhat.com/ubi8/openjdk-11~https://github.com/tektutor/openshift-1620sep-2024.git --context-dir=Day5/s2i/spring-ms --strategy=source
+```
+Expected output
+![image](https://github.com/user-attachments/assets/6bdc7dd6-43ab-4680-a793-cb5a344bfddd)
+![image](https://github.com/user-attachments/assets/ecef4c99-1d3c-4933-a907-a0ee1ffa31c8)
+![image](https://github.com/user-attachments/assets/e154e050-ddc9-4df7-bd46-7ba7fc5155d0)
+![image](https://github.com/user-attachments/assets/920aea5a-c382-4a8e-ad83-47ea4afe1275)
+![image](https://github.com/user-attachments/assets/197e9623-08d3-4911-b2e1-fa12117e4d4f)
+![image](https://github.com/user-attachments/assets/56e4d13c-2cae-4caa-a05a-26afc2c89f44)
 
 
 ## Info - What is Continuous Integration?
@@ -1667,6 +1686,7 @@ svc/nginx - 172.30.57.123 ports 8080, 8443
 
 
 ## Info - ReplicationController vs ReplicaSet
+<pre>
 - ReplicationController support both Rolling update and Scale up/down, which violates Single Responsibility Principle
 - New applications should consider using Deployment over the ReplicationController
 - When we create deployment, it automatically creates K8s Deployment resource and K8s ReplicaSet resource
@@ -1675,7 +1695,8 @@ svc/nginx - 172.30.57.123 ports 8080, 8443
 - Deployment Controller supports rolling update
 - ReplicaSet controller support scale up/down
 - Hence, we should not use ReplicationController any more though it is there for backward compatibilty purpose
-  
+</pre>
+
 ## Info - NodePort vs Route
 <pre>
 - NodePort is an external service
@@ -1696,3 +1717,4 @@ Red Hat Openshift also supports adding Windows Virtual Machines (nodes) into the
 <pre>
 https://docs.openshift.com/container-platform/4.8/windows_containers/understanding-windows-container-workloads.html#understanding-windows-container-workloads
 </pre>
+

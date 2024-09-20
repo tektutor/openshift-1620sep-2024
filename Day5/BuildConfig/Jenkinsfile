@@ -5,6 +5,7 @@ pipeline {
         agent { label 'master' }
 	steps {
 	   dir("Day5/BuildConfig") {
+		sh "oc project jegan"
 		sh "oc apply -f buildconfig-pushto-artifactory.yml"
                 sh "oc start-build bc/hello"
            }
