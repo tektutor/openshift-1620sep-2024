@@ -8,7 +8,7 @@ spec:
   port:
     targetPort: 8080
   to:
-    kind: "Service"
+    kind: ""
     name: hello
     weight: null
 status: {}
