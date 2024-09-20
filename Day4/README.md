@@ -84,8 +84,21 @@ Expected output
 ![image](https://github.com/user-attachments/assets/9ca5d60d-d649-4766-90f5-42f316bec604)
 
 ## Lab - Job
+```
+cd ~/openshift-1620sep-2024
+git pull
+cd Day4/job
+oc apply -f job.yml
+```
+
 
 ## Lab - CronJob
+```
+cd ~/openshift-1620sep-2024
+git pull
+cd Day4/cronjob
+oc apply -f cronjob.yml
+```
 
 ## Lab - Creating an edge route for nginx deployment
 Let's deploy nginx 
