@@ -21,7 +21,7 @@ pipeline {
 		sh "oc delete -f hello-route.yml"
 		sh "oc create -f hello-deploy.yml"
 		sh "oc create -f hello-svc.yml"
-		sh "oc creat -f hello-route.yml"
+		sh "oc create -f hello-route.yml"
            }
 	}
      }
