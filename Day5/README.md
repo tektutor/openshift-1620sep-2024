@@ -46,6 +46,8 @@ oc get po -o wide
 Now, let's delete the pod
 ```
 cd ~/openshift-1620sep-2024
+```
+
 ## Lab - Scheduling pods matching a specific node criteria
 There are 2 types of Node Affinity possible
 1. Preferred During Scheduling Ignored During Execution
@@ -160,21 +162,13 @@ oc label node worker02.ocp4.rps.com disk-
 ## Lab - Deploying an angular js application into openshift using docker strategy
 ```
 oc project
-oc new-app https://github.com/tektutor/openshift-sep-2024.git --strategy=docker --context-dir=Day4/angular/Angular-openshift-example
+oc new-app https://github.com/tektutor/openshift-1620sep-2024.git --strategy=docker --context-dir=Day4/angular/Angular-openshift-example
 oc get svc
 oc expose svc/openshift-1620sep-2024
 oc get route
 ```
 
 Expected output
-![image](https://github.com/user-attachments/assets/914b43d6-dd7d-4fd5-ae9d-99f131136b56)
-![image](https://github.com/user-attachments/assets/ba7ccca8-9403-4fe6-b5dc-348f072a3e4d)
-![image](https://github.com/user-attachments/assets/24d7ef04-5426-417f-91e9-138cfdd64d61)
-![image](https://github.com/user-attachments/assets/3e5ed905-9eb5-47d4-9fdc-21c573b70ff4)
-![image](https://github.com/user-attachments/assets/fc6f166f-cd23-4891-ab67-c85bfaa4ca58)
-![image](https://github.com/user-attachments/assets/0794590f-977e-47c7-961b-ef8f8b82fdd1)
-![image](https://github.com/user-attachments/assets/2a51c617-ce6d-4919-a520-adb9a7f7b242)
-![image](https://github.com/user-attachments/assets/b6c0f2cd-b2d5-4439-bcc9-214ce6d9bf4f)
 
 
 ## Lab - Creating an edge route for nginx deployment
@@ -230,15 +224,11 @@ First create an image stream where the newly built application image will be sto
 ```
 cd ~/openshift-1620sep-2024
 git pull
-cd Day5/BuildConfig
 oc create imagestream tektutor-spring-hello
 oc describe imagestream/tektutor-spring-hello
 ```
 
 Expected output
-![image](https://github.com/user-attachments/assets/a3a86507-07c5-4c3a-8985-569bf19dc196)
-![image](https://github.com/user-attachments/assets/54d1e26b-5712-4eaf-9e12-c2fe947a54ec)
-![image](https://github.com/user-attachments/assets/ca8d7a50-108c-44dc-9721-44975bf9aecd)
 
 
 Now we can create the build config
@@ -252,13 +242,6 @@ oc get imagestream
 oc describe imagestream/tektutor-spring-hello
 ```
 Expected output
-![image](https://github.com/user-attachments/assets/fa3c9b96-b6e8-45b7-82b7-a111d660137f)
-![image](https://github.com/user-attachments/assets/fd2b185c-b8d8-4280-8338-d1667bfe63f4)
-![image](https://github.com/user-attachments/assets/b471e56c-0ca3-4c82-88ac-ac9b8e9e68e8)
-![image](https://github.com/user-attachments/assets/1f773cc9-f5e1-400f-862e-fb484a44923e)
-![image](https://github.com/user-attachments/assets/23dfee9b-1bd8-4ff0-a224-516dedd6e759)
-![image](https://github.com/user-attachments/assets/3907840e-ee49-4a84-b16f-1b7fdab91bb0)
-
 
 ## Lab - Buiding spring-boot sample microservice application using BuildConfig and push the image to Private JFrog Artifactory
 This build config does the following
@@ -382,11 +365,6 @@ Now you should be able to login to your jfrog cloud with your gmail account that
 ![JFrog](jfrog10.png)
 ![JFrog](jfrog11.png)
 ![JFrog](jfrog12.png)
-![image](https://github.com/user-attachments/assets/a0e3e185-943b-481c-be8d-347bfa0ef9b5)
-![image](https://github.com/user-attachments/assets/ce91683c-e576-4add-b908-8316399a76dc)
-![image](https://github.com/user-attachments/assets/ee5e2f8c-19ee-4146-91f9-a1518337fce4)
-![image](https://github.com/user-attachments/assets/78294ae4-d603-4cf5-ae76-d3e977819a4f)
-
 ![JFrog](jfrog13.png)
 
 <pre>
@@ -669,7 +647,7 @@ etcdctl get "/kubernetes.io/pods/jegan/mariadb-8469c94c8b-tf65s" --prefix=true
 
 ## Lab - Deploying a multipod java application that fetches data from mariadb database
 ```
-cd ~/openshift-sep-2024
+cd ~/openshift-1620sep-2024
 git pull
 
 cd Day5/hello-microservice
@@ -953,21 +931,13 @@ oc label node worker02.ocp4.rps.com disk-
 ## Lab - Deploying an angular js application into openshift using docker strategy
 ```
 oc project
-oc new-app https://github.com/tektutor/openshift-sep-2024.git --strategy=docker --context-dir=Day4/angular/Angular-openshift-example
+oc new-app https://github.com/tektutor/openshift-1620sep-2024.git --strategy=docker --context-dir=Day5/angular/Angular-openshift-example
 oc get svc
 oc expose svc/openshift-1620sep-2024
 oc get route
 ```
 
 Expected output
-![image](https://github.com/user-attachments/assets/914b43d6-dd7d-4fd5-ae9d-99f131136b56)
-![image](https://github.com/user-attachments/assets/ba7ccca8-9403-4fe6-b5dc-348f072a3e4d)
-![image](https://github.com/user-attachments/assets/24d7ef04-5426-417f-91e9-138cfdd64d61)
-![image](https://github.com/user-attachments/assets/3e5ed905-9eb5-47d4-9fdc-21c573b70ff4)
-![image](https://github.com/user-attachments/assets/fc6f166f-cd23-4891-ab67-c85bfaa4ca58)
-![image](https://github.com/user-attachments/assets/0794590f-977e-47c7-961b-ef8f8b82fdd1)
-![image](https://github.com/user-attachments/assets/2a51c617-ce6d-4919-a520-adb9a7f7b242)
-![image](https://github.com/user-attachments/assets/b6c0f2cd-b2d5-4439-bcc9-214ce6d9bf4f)
 
 
 ## Lab - Creating an edge route for nginx deployment
@@ -1029,9 +999,6 @@ oc describe imagestream/tektutor-spring-hello
 ```
 
 Expected output
-![image](https://github.com/user-attachments/assets/a3a86507-07c5-4c3a-8985-569bf19dc196)
-![image](https://github.com/user-attachments/assets/54d1e26b-5712-4eaf-9e12-c2fe947a54ec)
-![image](https://github.com/user-attachments/assets/ca8d7a50-108c-44dc-9721-44975bf9aecd)
 
 
 Now we can create the build config
@@ -1045,12 +1012,6 @@ oc get imagestream
 oc describe imagestream/tektutor-spring-hello
 ```
 Expected output
-![image](https://github.com/user-attachments/assets/fa3c9b96-b6e8-45b7-82b7-a111d660137f)
-![image](https://github.com/user-attachments/assets/fd2b185c-b8d8-4280-8338-d1667bfe63f4)
-![image](https://github.com/user-attachments/assets/b471e56c-0ca3-4c82-88ac-ac9b8e9e68e8)
-![image](https://github.com/user-attachments/assets/1f773cc9-f5e1-400f-862e-fb484a44923e)
-![image](https://github.com/user-attachments/assets/23dfee9b-1bd8-4ff0-a224-516dedd6e759)
-![image](https://github.com/user-attachments/assets/3907840e-ee49-4a84-b16f-1b7fdab91bb0)
 
 
 ## Lab - Buiding spring-boot sample microservice application using BuildConfig and push the image to Private JFrog Artifactory
@@ -1175,11 +1136,6 @@ Now you should be able to login to your jfrog cloud with your gmail account that
 ![JFrog](jfrog10.png)
 ![JFrog](jfrog11.png)
 ![JFrog](jfrog12.png)
-![image](https://github.com/user-attachments/assets/a0e3e185-943b-481c-be8d-347bfa0ef9b5)
-![image](https://github.com/user-attachments/assets/ce91683c-e576-4add-b908-8316399a76dc)
-![image](https://github.com/user-attachments/assets/ee5e2f8c-19ee-4146-91f9-a1518337fce4)
-![image](https://github.com/user-attachments/assets/78294ae4-d603-4cf5-ae76-d3e977819a4f)
-
 ![JFrog](jfrog13.png)
 
 <pre>
