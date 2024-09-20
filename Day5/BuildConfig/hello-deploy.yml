@@ -15,7 +15,7 @@ spec:
         app: hello
     spec:
       containers:
-      - image: openshift1620sep2024.jfrog.io/jegan-docker/hello-spring-microservice:1.0 
+      - image: openshift1620sep2024.jfrog.io/jegan-docker/hello:1.0 
         name: hello
       imagePullSecrets:
       - name: private-jfrog-image-registry-new
