@@ -1709,3 +1709,8 @@ Red Hat Openshift also supports adding Windows Virtual Machines (nodes) into the
 <pre>
 https://docs.openshift.com/container-platform/4.8/windows_containers/understanding-windows-container-workloads.html#understanding-windows-container-workloads
 </pre>
+
+## Please share your training feedback here
+<pre>
+https://survey.zohopublic.com/zs/bgD42z
+</pre>
