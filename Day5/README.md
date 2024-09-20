@@ -288,6 +288,10 @@ oc logs -f bc/hello
 ```
 
 Expected output
+![image](https://github.com/user-attachments/assets/06adaa94-0822-460a-b4a5-0873886ae366)
+![image](https://github.com/user-attachments/assets/9960a46e-234c-41ab-92c1-8aebfcab386d)
+![image](https://github.com/user-attachments/assets/e74926e5-6196-4061-a1ff-56f80c2e45b2)
+![image](https://github.com/user-attachments/assets/38892c00-3e05-4dac-9aca-35101187bbef)
 
 
 
