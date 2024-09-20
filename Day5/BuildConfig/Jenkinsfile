@@ -16,9 +16,9 @@ pipeline {
         agent { label 'master' }
 	steps {
 	   dir("Day5/BuildConfig") {
-		sh "oc create -f hello-deploy.yml"
-		sh "oc create -f hello-svc.yml"
-		sh "oc create -f hello-route.yml"
+		sh "oc apply -f hello-deploy.yml"
+		sh "oc apply -f hello-svc.yml"
+		sh "oc apply -f hello-route.yml"
            }
 	}
      }
