@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hello
+  name: hello
+spec:
+  port:
+    targetPort: 8080
+  to:
+    kind: ""
+    name: hello
+    weight: null
+status: {}

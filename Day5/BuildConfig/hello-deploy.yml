@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello
+  name: hello
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+      - image: jfrogsep2024.jfrog.io/artifactory/tektutor-docker/hello-spring-microservice/3.0 
+        name: hello
+      imagePullSecrets:
+      - name: private-jfrog-image-registry-new

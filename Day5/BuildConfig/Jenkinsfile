@@ -1,0 +1,25 @@
+pipeline {
+  agent none
+  stages {
+     stage ( "Stage 1 - Build Custom Docker Image with our aplication" ) {
+        agent { label 'master' }
+	steps {
+	   dir("Day5/BuildConfig") {
+		sh "oc apply -f buildconfig-pushto-artifactory.yml"
+                sh "oc start-build bc/hello"
+           }
+	}
+     }
+
+     stage ( "Stage 2 - Deploy hello microservice into OpenShift" ) { 
+        agent { label 'master' }
+	steps {
+	   dir("Day5/BuildConfig") {
+		sh "oc apply -f hello-deploy.yml"
+		sh "oc apply -f hello-svc.yml"
+		sh "oc apply -f hello-route.yml"
+           }
+	}
+     }
+  }
+}
