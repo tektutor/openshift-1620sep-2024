@@ -16,9 +16,6 @@ pipeline {
         agent { label 'master' }
 	steps {
 	   dir("Day5/BuildConfig") {
-		sh "oc delete -f hello-deploy.yml"
-		sh "oc delete -f hello-svc.yml"
-		sh "oc delete -f hello-route.yml"
 		sh "oc create -f hello-deploy.yml"
 		sh "oc create -f hello-svc.yml"
 		sh "oc create -f hello-route.yml"
