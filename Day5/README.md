@@ -1374,6 +1374,27 @@ As we have good working knowledge in Kubernetes/Openshift, let's understand how 
 - Weave is a good choice for organizations that need a flexible and scalable networking solution for their Kubernetes/Openshift clusters	
 </pre>
 
+## Lab - Helm
+
+#### Info - Helm Overview
+<pre>
+- Helm is a package manager
+- with this package manager, one can download existing helm charts and deploy those applications into Kubernetes/openshift
+- with helm package manager, we can also package our custom application yaml files as Helm charts
+</pre>
+
+Let's package our wordpress & mariadb multipod application as helm chart
+```
+helm create wordpress
+ls
+tree wordpress
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/3c29f5f0-80c2-4d86-b805-3e54b3f18df7)
+
+
+
 # Bonus Labs (Optional - not in our training agenda)
 
 ## Lab - Finding more details about Openshift Private Image Registry
