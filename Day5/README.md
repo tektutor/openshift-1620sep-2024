@@ -1393,6 +1393,27 @@ tree wordpress
 Expected output
 ![image](https://github.com/user-attachments/assets/3c29f5f0-80c2-4d86-b805-3e54b3f18df7)
 
+Let's delete the files under templates folder
+```
+cd wordpress/templates
+rm -rf *
+tree
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/9d99c837-ef49-452a-af02-cc02f0d80f23)
+
+Let's copy the scripts into the templates folder
+```
+cp ~/openshift-1620sep-2024/Day5/helm/scripts/*.yml ~/openshift-1620sep-2024/Day5/helm/wordpress/templates
+cd ~/openshift-1620sep-2024/Day5/helm
+tree wordpress
+```
+Expected output
+![image](https://github.com/user-attachments/assets/c9213d98-3321-4312-a879-e6ad145cafac)
+![image](https://github.com/user-attachments/assets/7f22d5f8-13a8-463f-8779-662a5aa1f38c)
+![image](https://github.com/user-attachments/assets/15dc37d7-441a-4bf8-b3d5-60ce9637961b)
+![image](https://github.com/user-attachments/assets/022b3dd3-fbed-4dd9-9c0a-bf2f21456f2f)
 
 
 # Bonus Labs (Optional - not in our training agenda)
