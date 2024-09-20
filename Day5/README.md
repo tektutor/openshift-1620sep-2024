@@ -1,5 +1,11 @@
 # Day 5
 
+## Please share your training feedback here ( complete it from RPS Lab machine )
+<pre>
+https://survey.zohopublic.com/zs/bgD42z
+</pre>
+
+
 ## Lab - Scheduling pods matching a specific node criteria
 There are 2 types of Node Affinity possible
 1. Preferred During Scheduling Ignored During Execution
@@ -1712,7 +1718,3 @@ Red Hat Openshift also supports adding Windows Virtual Machines (nodes) into the
 https://docs.openshift.com/container-platform/4.8/windows_containers/understanding-windows-container-workloads.html#understanding-windows-container-workloads
 </pre>
 
-## Please share your training feedback here ( complete it from RPS Lab machine )
-<pre>
-https://survey.zohopublic.com/zs/bgD42z
-</pre>
