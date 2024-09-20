@@ -200,13 +200,22 @@ cd Day5/persistent-volume/redis
 ## Lab - Deploying an angular js application into openshift using docker strategy
 ```
 oc project
-oc new-app https://github.com/tektutor/openshift-1620sep-2024.git --strategy=docker --context-dir=Day4/angular/Angular-openshift-example
+oc new-app https://github.com/tektutor/openshift-1620sep-2024.git --strategy=docker --context-dir=Day5/angular/Angular-openshift-example
 oc get svc
 oc expose svc/openshift-1620sep-2024
+oc get buildconfigs
+oc get builds
 oc get route
+oc logs -f bc/openshift-1620sep-2024
 ```
 
 Expected output
+![image](https://github.com/user-attachments/assets/f82f626a-99b6-4b42-8d20-dfd84e0748fe)
+![image](https://github.com/user-attachments/assets/eac52369-2df9-48bc-ab90-9b7a5c596776)
+![image](https://github.com/user-attachments/assets/b951e0de-78ac-40fb-b25e-779c3bc9990f)
+![image](https://github.com/user-attachments/assets/f342fdcf-dcd9-4418-ae4d-b2c2934489e1)
+![image](https://github.com/user-attachments/assets/4c5b97c1-a7a8-4767-94ef-f0c2772af516)
+![image](https://github.com/user-attachments/assets/462f8c3e-da5d-4cc4-8970-09ba2f234502)
 
 
 ## Lab - BuildConfig
@@ -1406,8 +1415,13 @@ Expected output
 Let's copy the scripts into the templates folder
 ```
 cp ~/openshift-1620sep-2024/Day5/helm/scripts/*.yml ~/openshift-1620sep-2024/Day5/helm/wordpress/templates
+cp ~/openshift-1620sep-2024/Day5/helm/values.yml ~/openshift-1620sep-2024/Day5/helm/wordpress
 cd ~/openshift-1620sep-2024/Day5/helm
 tree wordpress
+helm package wordpress
+ls
+helm install wordpress wordpress-0.1.0.tgz
+helm list
 ```
 Expected output
 ![image](https://github.com/user-attachments/assets/c9213d98-3321-4312-a879-e6ad145cafac)
