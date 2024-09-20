@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mariadb-pvc-jegan # Replace 'jegan' with your name
+spec:
+  storageClassName: manual
+  selector:
+    matchLabels:
+      name: jegan # Replace 'jegan' with your name
+      app: mariadb
+  accessModes:
+  - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 100Mi
