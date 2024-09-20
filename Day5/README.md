@@ -1406,8 +1406,13 @@ Expected output
 Let's copy the scripts into the templates folder
 ```
 cp ~/openshift-1620sep-2024/Day5/helm/scripts/*.yml ~/openshift-1620sep-2024/Day5/helm/wordpress/templates
+cp ~/openshift-1620sep-2024/Day5/helm/values.yml ~/openshift-1620sep-2024/Day5/helm/wordpress
 cd ~/openshift-1620sep-2024/Day5/helm
 tree wordpress
+helm package wordpress
+ls
+helm install wordpress wordpress-0.1.0.tgz
+helm list
 ```
 Expected output
 ![image](https://github.com/user-attachments/assets/c9213d98-3321-4312-a879-e6ad145cafac)
