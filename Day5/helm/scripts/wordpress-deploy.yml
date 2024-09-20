@@ -17,7 +17,7 @@ spec:
       volumes:
       - name: wordpress-storage
         persistentVolumeClaim:
-          claimName: wordpress-pvc-jegan  # Replace 'jegan' with your name
+          claimName: wordpress-pvc-{{.Values.pv_label}}
       containers:
       - name: wordpress
         image: bitnami/wordpress:latest

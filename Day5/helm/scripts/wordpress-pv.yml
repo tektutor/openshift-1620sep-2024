@@ -1,18 +1,18 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: wordpress-pv-jegan # Replace 'jegan' with your name
+  name: wordpress-pv-{{.Values.pv_label}}
   labels:
-    name: jegan # Replace 'jegan' with your name
+    name: {{.Values.pv_label}}
     app: wordpress
 spec:
   storageClassName: manual
   capacity:
-    storage: 100Mi
+    storage: {{.Values.nfs.wordpress_pv_size}} 
   volumeMode: Filesystem
   accessModes:
   - ReadWriteOnce
   peristentVolumeReclaimPolicy: Delete
   nfs:
-    server: 10.10.15.35 # Replace with your linux server IP
-    path: /var/nfs/jegan/share1 # Replace 'jegan' with your linux username user[xy]
+    server: {{.Values.nfs.ip}} 
+    path: {{.Values.nfs.wordpress_pv_path}} 
