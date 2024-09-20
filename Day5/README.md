@@ -1680,6 +1680,7 @@ svc/nginx - 172.30.57.123 ports 8080, 8443
 
 
 ## Info - ReplicationController vs ReplicaSet
+<pre>
 - ReplicationController support both Rolling update and Scale up/down, which violates Single Responsibility Principle
 - New applications should consider using Deployment over the ReplicationController
 - When we create deployment, it automatically creates K8s Deployment resource and K8s ReplicaSet resource
@@ -1688,7 +1689,8 @@ svc/nginx - 172.30.57.123 ports 8080, 8443
 - Deployment Controller supports rolling update
 - ReplicaSet controller support scale up/down
 - Hence, we should not use ReplicationController any more though it is there for backward compatibilty purpose
-  
+</pre>
+
 ## Info - NodePort vs Route
 <pre>
 - NodePort is an external service
@@ -1710,7 +1712,7 @@ Red Hat Openshift also supports adding Windows Virtual Machines (nodes) into the
 https://docs.openshift.com/container-platform/4.8/windows_containers/understanding-windows-container-workloads.html#understanding-windows-container-workloads
 </pre>
 
-## Please share your training feedback here
+## Please share your training feedback here ( complete it from RPS Lab machine )
 <pre>
 https://survey.zohopublic.com/zs/bgD42z
 </pre>
