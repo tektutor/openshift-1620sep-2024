@@ -159,6 +159,44 @@ oc delete -f required-affinity.yml
 oc label node worker02.ocp4.rps.com disk-
 ```
 
+## Lab - Deploying mongodb with persistent volume
+```
+cd ~/openshift-1620sep-2024
+git pull
+cd Day5/persistent-volume/mongodb
+./deploy.sh
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/d91a694b-d726-4bd9-b1e5-f6f42838bbec)
+
+Once you are done with this exercise, you may dispose the resources created
+```
+cd ~/openshift-1620sep-2024
+git pull
+cd Day5/persistent-volume/mongodb
+./undeploy.sh
+```
+
+## Lab - Deploying redis with peristent volume
+```
+cd ~/openshift-1620sep-2024
+git pull
+cd Day5/persistent-volume/redis
+./deploy.sh
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/4f8f9509-b96b-4d9b-b70a-a67fe0e8e38d)
+
+Once you are donw with the exercise, you may dispose the resource created
+```
+cd ~/openshift-1620sep-2024
+git pull
+cd Day5/persistent-volume/redis
+./undeploy.sh
+```
+
 ## Lab - Deploying an angular js application into openshift using docker strategy
 ```
 oc project
