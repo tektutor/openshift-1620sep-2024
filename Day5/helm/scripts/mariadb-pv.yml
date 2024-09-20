@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mariadb-pv-{{.Values.pv_label}}
+  labels:
+    name: {{.Values.pv_label}}
+    app: mariadb
+spec:
+  storageClassName: manual
+  capacity:
+    storage: {{.Values.nfs.mariadb_pv_size}}
+  volumeMode: Filesystem
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: {{.Values.nfs.ip}}
+    path: {{.Values.nfs.mariadb_pv_path}} 
+

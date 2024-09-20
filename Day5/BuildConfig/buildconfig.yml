@@ -10,7 +10,7 @@ spec:
   source:
     type: Git
     git:
-      uri: "https://github.com/tektutor/openshift-sep-2024.git"
+      uri: "https://github.com/tektutor/openshift-1620sep-2024.git"
       ref: main
     contextDir: "Day5/BuildConfig"
   strategy:

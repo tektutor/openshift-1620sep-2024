@@ -159,16 +159,63 @@ oc delete -f required-affinity.yml
 oc label node worker02.ocp4.rps.com disk-
 ```
 
-## Lab - Deploying an angular js application into openshift using docker strategy
+## Lab - Deploying mongodb with persistent volume
 ```
-oc project
-oc new-app https://github.com/tektutor/openshift-1620sep-2024.git --strategy=docker --context-dir=Day4/angular/Angular-openshift-example
-oc get svc
-oc expose svc/openshift-1620sep-2024
-oc get route
+cd ~/openshift-1620sep-2024
+git pull
+cd Day5/persistent-volume/mongodb
+./deploy.sh
 ```
 
 Expected output
+![image](https://github.com/user-attachments/assets/d91a694b-d726-4bd9-b1e5-f6f42838bbec)
+
+Once you are done with this exercise, you may dispose the resources created
+```
+cd ~/openshift-1620sep-2024
+git pull
+cd Day5/persistent-volume/mongodb
+./undeploy.sh
+```
+
+## Lab - Deploying redis with peristent volume
+```
+cd ~/openshift-1620sep-2024
+git pull
+cd Day5/persistent-volume/redis
+./deploy.sh
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/4f8f9509-b96b-4d9b-b70a-a67fe0e8e38d)
+
+Once you are donw with the exercise, you may dispose the resource created
+```
+cd ~/openshift-1620sep-2024
+git pull
+cd Day5/persistent-volume/redis
+./undeploy.sh
+```
+
+## Lab - Deploying an angular js application into openshift using docker strategy
+```
+oc project
+oc new-app https://github.com/tektutor/openshift-1620sep-2024.git --strategy=docker --context-dir=Day5/angular/Angular-openshift-example
+oc get svc
+oc expose svc/openshift-1620sep-2024
+oc get buildconfigs
+oc get builds
+oc get route
+oc logs -f bc/openshift-1620sep-2024
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/f82f626a-99b6-4b42-8d20-dfd84e0748fe)
+![image](https://github.com/user-attachments/assets/eac52369-2df9-48bc-ab90-9b7a5c596776)
+![image](https://github.com/user-attachments/assets/b951e0de-78ac-40fb-b25e-779c3bc9990f)
+![image](https://github.com/user-attachments/assets/f342fdcf-dcd9-4418-ae4d-b2c2934489e1)
+![image](https://github.com/user-attachments/assets/4c5b97c1-a7a8-4767-94ef-f0c2772af516)
+![image](https://github.com/user-attachments/assets/462f8c3e-da5d-4cc4-8970-09ba2f234502)
 
 
 ## Lab - BuildConfig
@@ -241,6 +288,10 @@ oc logs -f bc/hello
 ```
 
 Expected output
+![image](https://github.com/user-attachments/assets/06adaa94-0822-460a-b4a5-0873886ae366)
+![image](https://github.com/user-attachments/assets/9960a46e-234c-41ab-92c1-8aebfcab386d)
+![image](https://github.com/user-attachments/assets/e74926e5-6196-4061-a1ff-56f80c2e45b2)
+![image](https://github.com/user-attachments/assets/38892c00-3e05-4dac-9aca-35101187bbef)
 
 
 
@@ -1335,6 +1386,53 @@ As we have good working knowledge in Kubernetes/Openshift, let's understand how 
 - creates a mesh overlay network to connect all the nodes in the cluster
 - Weave is a good choice for organizations that need a flexible and scalable networking solution for their Kubernetes/Openshift clusters	
 </pre>
+
+## Lab - Helm
+
+#### Info - Helm Overview
+<pre>
+- Helm is a package manager
+- with this package manager, one can download existing helm charts and deploy those applications into Kubernetes/openshift
+- with helm package manager, we can also package our custom application yaml files as Helm charts
+</pre>
+
+Let's package our wordpress & mariadb multipod application as helm chart
+```
+helm create wordpress
+ls
+tree wordpress
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/3c29f5f0-80c2-4d86-b805-3e54b3f18df7)
+
+Let's delete the files under templates folder
+```
+cd wordpress/templates
+rm -rf *
+tree
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/9d99c837-ef49-452a-af02-cc02f0d80f23)
+
+Let's copy the scripts into the templates folder
+```
+cp ~/openshift-1620sep-2024/Day5/helm/scripts/*.yml ~/openshift-1620sep-2024/Day5/helm/wordpress/templates
+cp ~/openshift-1620sep-2024/Day5/helm/values.yml ~/openshift-1620sep-2024/Day5/helm/wordpress
+cd ~/openshift-1620sep-2024/Day5/helm
+tree wordpress
+helm package wordpress
+ls
+helm install wordpress wordpress-0.1.0.tgz
+helm list
+```
+Expected output
+![image](https://github.com/user-attachments/assets/c9213d98-3321-4312-a879-e6ad145cafac)
+![image](https://github.com/user-attachments/assets/7f22d5f8-13a8-463f-8779-662a5aa1f38c)
+![image](https://github.com/user-attachments/assets/15dc37d7-441a-4bf8-b3d5-60ce9637961b)
+![image](https://github.com/user-attachments/assets/022b3dd3-fbed-4dd9-9c0a-bf2f21456f2f)
+
 
 # Bonus Labs (Optional - not in our training agenda)
 

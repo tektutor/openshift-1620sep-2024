@@ -1,0 +1,8 @@
+nfs:
+  ip: 10.10.15.35
+  mariadb_pv_path: /var/nfs/jegan/share1
+  wordpress_pv_path: /var/nfs/jegan/share2
+  mariadb_pv_size: 100Mi
+  wordpress_pv_size: 100Mi
+
+pv_label: jegan
