@@ -288,7 +288,24 @@ oc logs -f bc/hello
 ```
 
 Expected output
+![image](https://github.com/user-attachments/assets/06adaa94-0822-460a-b4a5-0873886ae366)
+![image](https://github.com/user-attachments/assets/9960a46e-234c-41ab-92c1-8aebfcab386d)
+![image](https://github.com/user-attachments/assets/e74926e5-6196-4061-a1ff-56f80c2e45b2)
+![image](https://github.com/user-attachments/assets/38892c00-3e05-4dac-9aca-35101187bbef)
 
+
+## Lab - S2I - Deploying application using GitHub source code with source strategy
+```
+oc project jegan
+oc new-app registry.access.redhat.com/ubi8/openjdk-11~https://github.com/tektutor/openshift-1620sep-2024.git --context-dir=Day5/s2i/spring-ms --strategy=source
+```
+Expected output
+![image](https://github.com/user-attachments/assets/6bdc7dd6-43ab-4680-a793-cb5a344bfddd)
+![image](https://github.com/user-attachments/assets/ecef4c99-1d3c-4933-a907-a0ee1ffa31c8)
+![image](https://github.com/user-attachments/assets/e154e050-ddc9-4df7-bd46-7ba7fc5155d0)
+![image](https://github.com/user-attachments/assets/920aea5a-c382-4a8e-ad83-47ea4afe1275)
+![image](https://github.com/user-attachments/assets/197e9623-08d3-4911-b2e1-fa12117e4d4f)
+![image](https://github.com/user-attachments/assets/56e4d13c-2cae-4caa-a05a-26afc2c89f44)
 
 
 ## Info - What is Continuous Integration?
